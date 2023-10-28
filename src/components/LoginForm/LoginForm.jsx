@@ -25,8 +25,6 @@ export const LoginForm = () => {
         password: values.password,
       })
     );
-
-    actions.resetForm();
   };
 
   return (

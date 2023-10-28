@@ -12,8 +12,8 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 const ContactSchema = Yup.object().shape({
-  name: Yup.string().min(8, 'Too Short!').max(30, 'Too Long!'),
-  email: Yup.string().min(8, 'Too Short!').max(30, 'Too Long!'),
+  name: Yup.string().min(3, 'Too Short!').max(30, 'Too Long!'),
+  email: Yup.string().min(14, 'Too Short!').max(30, 'Too Long!'),
   password: Yup.string().min(7, 'Too Short!').max(30, 'Too Long!'),
 });
 
@@ -28,8 +28,6 @@ export const RegisterForm = () => {
         password: values.password,
       })
     );
-
-    actions.resetForm();
   };
 
   return (
