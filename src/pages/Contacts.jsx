@@ -5,6 +5,7 @@ import { ContactEditor } from 'components/ContactEditor/ContactEditor';
 import { fetchContacts } from 'redux/contacts/operations';
 import { selectLoading } from 'redux/contacts/selectors';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { ContactFilter } from 'components/ContactFilter/ContactFilter';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ export default function Contacts() {
         </Helmet>
         <ContactEditor />
         <div>{isLoading && 'Request in progress...'}</div>
+        <ContactFilter />
         <ContactList />
       </>
     </HelmetProvider>
